@@ -6,7 +6,7 @@
 
     <groupId>com.ws.tool</groupId>
     <artifactId>mybatis-plus-generator</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <properties>
         <!-- 编译时的编码 -->

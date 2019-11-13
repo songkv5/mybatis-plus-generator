@@ -12,6 +12,7 @@ import com.ws.tool.mybatisplus.config.DataSource;
 import com.ws.tool.mybatisplus.config.OutputConfig;
 import com.ws.tool.mybatisplus.constants.DbTypeEnum;
 import com.ws.tool.mybatisplus.constants.ErrorCodeConstant;
+import com.ws.tool.mybatisplus.engine.CustomerFreemarkerTemplateEngine;
 import com.ws.tool.mybatisplus.exception.BaseException;
 import com.ws.tool.mybatisplus.exception.DbConfigException;
 import com.ws.tool.mybatisplus.helper.GeneratorHelper;
@@ -63,7 +64,7 @@ public class MybatisPlusCodeGenerator extends AbstractMojo {
             generator.setPackageInfo(pkgc());
             generator.setCfg(injectionConfig());
             generator.setGlobalConfig(globalConfig());
-            generator.setTemplateEngine(new FreemarkerTemplateEngine());
+            generator.setTemplateEngine(new CustomerFreemarkerTemplateEngine(getLog()));
             generator.setTemplate(templateConfig());
             generator.setStrategy(strategy());
             generator.execute();
