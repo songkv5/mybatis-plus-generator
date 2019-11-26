@@ -57,6 +57,11 @@ public class OutputConfig {
      */
     private boolean override = true;
 
+    /**
+     * 是否生成表字段常量
+     */
+    private boolean entityColumnConstant = false;
+
 
     public String getPkg() {
         return pkg;
@@ -154,6 +159,14 @@ public class OutputConfig {
         this.tPrefix = tPrefix;
     }
 
+    public boolean getEntityColumnConstant() {
+        return entityColumnConstant;
+    }
+
+    public void setEntityColumnConstant(boolean entityColumnConstant) {
+        this.entityColumnConstant = entityColumnConstant;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -182,6 +195,9 @@ public class OutputConfig {
         }
         if (this.tPrefix != null) {
             sb.append("\"tPrefix\":").append("\"").append(this.tPrefix).append("\"").append(",");
+        }
+        if (this.tPrefix != null) {
+            sb.append("\"entityColumnConstant\":").append("\"").append(this.entityColumnConstant).append("\"").append(",");
         }
         String s = sb.toString();
 

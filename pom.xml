@@ -6,7 +6,7 @@
 
     <groupId>com.ws.tool</groupId>
     <artifactId>mybatis-plus-generator</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <properties>
         <!-- 编译时的编码 -->
@@ -69,4 +69,16 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://nexus.nh.fangdd.cn/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://nexus.nh.fangdd.cn/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
 </project>

@@ -153,6 +153,7 @@ public class MybatisPlusCodeGenerator extends AbstractMojo {
         if (tPrefix != null) {
             strategy.setTablePrefix(tPrefix);
         }
+        strategy.setEntityColumnConstant(outputConfig.getEntityColumnConstant());
         return strategy;
     }
     private InjectionConfig injectionConfig() {
